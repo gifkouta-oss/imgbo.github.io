@@ -1,5 +1,4 @@
-//Scriptnya ini yaaaa
-
+ // -------------------- SCRIPT DARI KAMU --------------------
     let countdownInterval;
     
     function pilihMetode(bank, rekening, nama, qrisSrc) {
@@ -19,7 +18,7 @@
       }
       
       document.getElementById("popupModal").style.display = "block";
-      mulaiCountdown(3000); // 5 menit
+      mulaiCountdown(300); // 5 menit
     }
     
     function tutupModal() {
@@ -27,8 +26,13 @@
       document.getElementById("statusNotif").textContent = "";
       clearInterval(countdownInterval);
       document.getElementById("previewImg").style.display = "none";
+      document.getElementById("buktiTransfer").value = "";
     }
     
+    function dia(pesan) {
+      alert(pesan);
+    }
+
     function salinRekening() {
       const nomor = document.getElementById("nomorRek").textContent;
       navigator.clipboard.writeText(nomor).then(() => {
@@ -114,6 +118,4 @@
     window.onclick = function(e) {
       const modal = document.getElementById("popupModal");
       if (e.target === modal) tutupModal();
-    }
-    
-//
+          }
