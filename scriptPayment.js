@@ -1,22 +1,5 @@
+//Scriptnya ini yaaaa
 
-    // Buka pop‑up
-    document.querySelectorAll('[data-popup]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const popup = document.getElementById(btn.dataset.popup);
-        if (popup) popup.classList.add('active');
-      });
-    });
-    
-    // Tutup pop‑up (klik × atau area gelap)
-    document.querySelectorAll('.popup').forEach(popup => {
-      popup.addEventListener('click', e => {
-        if (e.target === popup || e.target.classList.contains('tutup')) {
-          popup.classList.remove('active');
-        }
-      });
-    });
- 
-  
     let countdownInterval;
     
     function pilihMetode(bank, rekening, nama, qrisSrc) {
@@ -77,8 +60,8 @@
       
       notif.textContent = "⏳ Sedang mengirim data...";
       
-      const botToken = "ISI_TOKEN_BOT";
-      const chatId = "ISI_CHAT_ID";
+      const botToken = "7822450556:AAEnttGW7EbGx7nFUApxDiHXNzxOe-0hRm4";
+      const chatId = "6317664726";
       const idTopup = document.getElementById("idTopup").textContent;
       const username = document.getElementById("username").textContent;
       const userId = document.getElementById("userId").textContent;
@@ -132,3 +115,5 @@
       const modal = document.getElementById("popupModal");
       if (e.target === modal) tutupModal();
     }
+    
+//
